@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: rgba(11, 79, 47, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    background: linear-gradient(135deg, #5b4343 0%, #3d2d2d 100%);
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Formă geometrică decorativă */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    transform: rotate(45deg);
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.img-box img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50px 5px 50px 5px;
+    box-shadow: 20px 20px 0px rgba(11, 79, 47, 0.3);
+}
+
+.text-box {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
+
+.servicii {
+    background: #5b4343;
+    background-image: radial-gradient(#6d5252 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.card {
+    width: 280px;
+    background: #ffffff;
+    color: #222;
+    padding: 20px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* DESPRE */
+.despre {
+    background: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.despre-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+}
+
+.circle {
+    position: relative;
+}
+
+/* Un inel în jurul imaginii circulare */
+.circle::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed #0b4f2f;
+    border-radius: 50%;
+}
+
+.circle img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+    background: #2c2626;
+    color: #ccc;
+    padding: 40px;
+    text-align: center;
+    border-top: 4px solid #0b4f2f;
+}
