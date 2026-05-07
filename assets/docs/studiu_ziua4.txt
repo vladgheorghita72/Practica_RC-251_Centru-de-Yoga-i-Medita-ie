@@ -1,0 +1,7 @@
+1.Explicația terminelor noi
+flex-grow / flex-shrink Sunt coeficienți de „lăcomie”. Dacă ai spațiu liber, elementul cu flex-grow mai mare se umflă cel mai mult. Dacă spațiul se strânge, cel cu flex-shrink mai mare se micșorează primul.
+align-items vs align-content Align-items se ocupă de elementele dintr-un singur rând. Align-content se folosește doar când ai mai multe rânduri (wrap) și vrei să muți toate rândurile deodată (mai sus, mai jos sau la mijloc).
+grid-template-areas E ca o „hartă” a site-ului făcută din cuvinte. În loc să numeri coloane, scrii direct în cod unde vrei să stea "header", "sidebar" sau "footer".
+
+ 
+

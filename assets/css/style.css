@@ -32,6 +32,7 @@ nav a {
     text-decoration: none;
     font-weight: 500;
     position: relative;
+    padding-bottom: 4px;
 }
 
 nav a::after {
@@ -39,10 +40,12 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: #fff;
-    transition: width 0.3s;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, #7fff7f, transparent);
+    border-radius: 2px;
+    transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 nav a:hover::after {
@@ -58,7 +61,6 @@ nav a:hover::after {
     padding: 80px 20px;
 }
 
-/* Formă geometrică decorativă */
 .hero::before {
     content: "";
     position: absolute;
@@ -106,12 +108,18 @@ nav a:hover::after {
     padding: 70px 20px;
 }
 
+*
+ * 1fr = o fracțiune din spațiul rămas disponibil.
+ * Dacă sunt 3 coloane, fiecare primește 1/3 din lățime.
+ * Dacă sunt 2 coloane, fiecare primește 1/2. Grila se adaptează singură!
+ */
 .cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin: 40px 0;
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 0 20px;
 }
 
 .card {
@@ -120,12 +128,12 @@ nav a:hover::after {
     color: #222;
     padding: 20px;
     border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .card img {
@@ -135,7 +143,6 @@ nav a:hover::after {
     border-radius: 15px;
 }
 
-/* DESPRE */
 .despre {
     background: #ffffff;
     color: #333;
@@ -155,7 +162,6 @@ nav a:hover::after {
     position: relative;
 }
 
-/* Un inel în jurul imaginii circulare */
 .circle::after {
     content: "";
     position: absolute;
@@ -176,7 +182,7 @@ nav a:hover::after {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* FOOTER */
+
 footer {
     background: #2c2626;
     color: #ccc;
