@@ -6,7 +6,9 @@ body {
 }
 
 header {
-    background: rgba(11, 79, 47, 0.95);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +29,7 @@ header {
 }
 
 nav a {
-    color: white;
+    color: #0b4f2f;
     margin: 0 20px;
     text-decoration: none;
     font-weight: 500;
@@ -123,7 +125,7 @@ nav a:hover::after {
 }
 
 .card {
-    width: 280px;
+    
     background: #ffffff;
     color: #222;
     padding: 20px;
@@ -160,6 +162,8 @@ nav a:hover::after {
 
 .circle {
     position: relative;
+    order: 1;
+
 }
 
 .circle::after {
@@ -180,6 +184,17 @@ nav a:hover::after {
     object-fit: cover;
     border: 5px solid #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.despre-content .text-box {
+    order: 2;
+}
+
+@media (max-width: 600px) {
+    .despre-content {
+        flex-direction: column;
+    }
+    .circle { order: 1; }
+    .despre-content .text-box { order: 2; }
+}
 }
 
 
