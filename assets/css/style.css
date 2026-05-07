@@ -108,7 +108,7 @@ nav a:hover::after {
     padding: 70px 20px;
 }
 
-*
+/*
  * 1fr = o fracțiune din spațiul rămas disponibil.
  * Dacă sunt 3 coloane, fiecare primește 1/3 din lățime.
  * Dacă sunt 2 coloane, fiecare primește 1/2. Grila se adaptează singură!
